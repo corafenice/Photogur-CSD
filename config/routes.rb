@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "users#new"
+
   resources :sessions
   resources :pictures
   resources :users
