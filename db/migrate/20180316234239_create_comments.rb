@@ -4,7 +4,7 @@ class CreateComments < ActiveRecord::Migration[5.1]
       t.integer :user_id
       t.integer :picture_id
       t.text    :usertext
-
+#testing for git push
       t.timestamps
     end
   end
