@@ -9,7 +9,9 @@
     </div>
 
     <div class="rightbar">
-      <!-- <i class="fas fa-search"></i> -->
+      <div class="magnify">
+        <i class="fas fa-search"></i>
+      </div>
       <div class="nextright">
         <p class="userinfo">
               <% if current_user %>
@@ -31,7 +33,7 @@
     <div class="leftpane">
     </div>
     <div class="textcontainer">
-      <p>
+      <p class="greeting">
       The most random collection of stock photos, unsorted.<br>
       <span>some pics we'll call popular, just because.</span>
       <%= link_to 'New Picture', new_picture_path %>
