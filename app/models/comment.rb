@@ -1,15 +1,4 @@
 class Comment < ApplicationRecord
-  belongs_to :picture 
+  belongs_to :picture
+  has_many :users
 end
-
-
-
-
-# class Comment < ApplicationRecord
-# <<<<<<< merge-with-pk
-#   belongs_to :picture 
-# # =======
-# #   belongs_to :user
-# #   belongs_to :picture
-# # >>>>>>> master
-# end
