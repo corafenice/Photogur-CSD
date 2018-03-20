@@ -13,4 +13,11 @@ class SessionsController < ApplicationController
     session[:user_id] = @user.id
     redirect_to pictures_path
   end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to pictures_url, notice: "logged out!"
+  end
+
+
 end

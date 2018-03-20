@@ -1,0 +1,98 @@
+
+
+<body>
+
+
+
+<div class="navbar">
+  <div class="leftbar">
+
+      <div class="logo">Photogur</div>
+      <div class="pulldown"><i class="fas fa-chevron-down"></i></div>
+      <div class="newpost"></div>
+
+  </div>
+
+  <div class="rightbar">
+    <!-- <i class="fas fa-search"></i> -->
+    <div class="nextright">
+      Sign Up
+    </div>
+    <div class="navright">
+      <% if current_user %>
+        Signed in as <%= current_user.username %>. <%= link_to "Log out", sessions_path("current"), :method => :delete %>
+      <% else %>
+        <%= link_to "Log in", new_sessions_path %> or <%= link_to "Sign up", new_users_path %>
+      <% end %>    </div>
+
+  </div>
+</div>
+
+
+
+  <div class="leftpane">
+  </div>
+  <div class="textcontainer">
+    <p>
+    The most random collection of stock photos, unsorted.<br>
+    <span>some pics we'll call popular, just because.</span>
+    </p>
+  </div>
+
+<div class="mainarea">
+
+
+
+    <div class="grid-tl">
+        <%= image_tag(@pictures.first.url )%>
+    </div>
+    <div class="grid-tlc">
+
+    </div>
+    <div class="grid-tc">
+
+    </div>
+    <div class="grid-trc">
+
+    </div>
+    <div class="grid-tr">
+
+    </div>
+    <div class="grid-ml">
+
+    </div>
+    <div class="grid-mlc">
+
+    </div>
+    <div class="grid-mc">
+
+    </div>
+    <div class="grid-mrc">
+
+    </div>
+    <div class="grid-mr">
+
+    </div>
+    <div class="grid-bl">
+
+    </div>
+    <div class="grid-blc">
+
+    </div>
+    <div class="grid-bc">
+
+    </div>
+    <div class="grid-brc">
+
+    </div>
+    <div class="grid-br">
+
+    </div>
+
+</div>
+
+<div class="rightpane">
+</div>
+
+</div>
+</body>

@@ -1,25 +1,104 @@
-<h1>Listing pictures</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="imgur">
+  <div class="navbar">
+    <div class="leftbar">
 
-  <tbody>
+        <div class="logo">Photogur</div>
+        <div class="pulldown"><i class="fas fa-chevron-down"></i></div>
+        <div class="newpost"></div>
+
+    </div>
+
+    <div class="rightbar">
+      <!-- <i class="fas fa-search"></i> -->
+      <div class="nextright">
+        <p class="userinfo">
+              <% if current_user %>
+                Signed in as <%= current_user.username %>. <%= link_to "Log out", sessions_path("current"), :method => :delete %>
+              <% else %>
+                <%= link_to "Log in", new_sessions_path %> or <%= link_to "Sign up", new_users_path %>
+              <% end %>
+            </p>
+      </div>
+      <div class="navright">
+        Sign In
+      </div>
+
+    </div>
+  </div>
+
+
+
+    <div class="leftpane">
+    </div>
+    <div class="textcontainer">
+      <p>
+      The most random collection of stock photos, unsorted.<br>
+      <span>some pics we'll call popular, just because.</span>
+      <%= link_to 'New Picture', new_picture_path %>
+      </p>
+    </div>
+
+  <div class="mainarea">
     <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.title %></td>
-        <td><%= image_tag(picture.url, width:"200" )%></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="grid">
+      <%= picture.title %>
+      <%= image_tag(picture.url, width:"100%" )%>
+      <%= link_to 'Show', picture %>
+      <%= link_to 'Edit', edit_picture_path(picture) %>
+      <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-<%= link_to 'New Picture', new_picture_path %>
+
+      <!-- <div class="grid-tl">
+      </div>
+      <div class="grid-tlc">
+
+      </div>
+      <div class="grid-tc">
+
+      </div>
+      <div class="grid-trc">
+
+      </div>
+      <div class="grid-tr">
+
+      </div>
+      <div class="grid-ml">
+
+      </div>
+      <div class="grid-mlc">
+
+      </div>
+      <div class="grid-mc">
+
+      </div>
+      <div class="grid-mrc">
+
+      </div>
+      <div class="grid-mr">
+
+      </div>
+      <div class="grid-bl">
+
+      </div>
+      <div class="grid-blc">
+
+      </div>
+      <div class="grid-bc">
+
+      </div>
+      <div class="grid-brc">
+
+      </div>
+      <div class="grid-br">
+
+      </div> -->
+
+  </div>
+
+  <div class="rightpane">
+  </div>
+
+  </div>
+</div>

@@ -16,8 +16,11 @@ class PicturesController < ApplicationController
   def new
     @picture = Picture.new
 
-  end
 
+  end
+def imgur
+        @pictures = Picture.all
+end
   # GET /pictures/1/edit
   def edit
   end
