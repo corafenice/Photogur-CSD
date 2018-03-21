@@ -274,7 +274,7 @@ div.mainarea{
 
   /* grid-row: 1 / 2;
   grid-column: 1 / 2; */
-    margin: 7px;
+    margin: 0;
     padding: 7px;
     border-radius: 3px;
 }

@@ -15,12 +15,10 @@ class PicturesController < ApplicationController
   # GET /pictures/new
   def new
     @picture = Picture.new
-
-
   end
-def imgur
+  def imgur
         @pictures = Picture.all
-end
+  end
   # GET /pictures/1/edit
   def edit
   end
@@ -28,13 +26,13 @@ end
   # POST /pictures
   # POST /pictures.json
   def create
-    puts "*****picture create********"
+    # puts "*****picture create********"
     @picture = Picture.new(picture_params)
     @picture.user = current_user
 
     respond_to do |format|
       if @picture.save
-        format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
+        format.html { redirect_to pictures_path, notice: 'Picture was successfully created.' }
         format.json { render :show, status: :created, location: @picture }
       else
         format.html { render :new }

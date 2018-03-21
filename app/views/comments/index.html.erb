@@ -4,13 +4,14 @@
 <% @comments.comments.each do |comment| %>
 <li>
   <span>
-  <%= User.find(comment.user_id).username%> wrote:
+  <%= User.find(comment.user_id).username.capitalize%> wrote:
   </span>
   <br>
   <div class="indent">
     <%= comment.usertext %><br>
   </div>
 </li>
+
 <% end %>
 <br><br>
 <%= form_for @comment do |f| %>
