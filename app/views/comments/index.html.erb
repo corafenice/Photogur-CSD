@@ -1,11 +1,14 @@
+<div class="textcontainer">
+
 <%= image_tag @comments.url %>
 <% @comments.comments.each do |comment| %>
-<li><%= comment.usertext %> <%= User.find(comment.user_id).username%></li>
+<li><%= User.find(comment.user_id).username%><br>  <%= comment.usertext %><br></li>
 <% end %>
-
+<br><br>
 <%= form_for @comment do |f| %>
 <%= f.label "Comment" %>
 <%= f.text_field :usertext %>
 <%= f.submit %>
 <% end %>
 <%= link_to 'Back', pictures_path %>
+</div>
