@@ -1,8 +1,16 @@
-<div class="textcontainer">
+<div class="alttextcontainer">
 
 <%= image_tag @comments.url %>
 <% @comments.comments.each do |comment| %>
-<li><%= User.find(comment.user_id).username%><br>  <%= comment.usertext %><br></li>
+<li>
+  <span>
+  <%= User.find(comment.user_id).username%> wrote:
+  </span>
+  <br>
+  <div class="indent">
+    <%= comment.usertext %><br>
+  </div>
+</li>
 <% end %>
 <br><br>
 <%= form_for @comment do |f| %>

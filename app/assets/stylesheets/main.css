@@ -19,6 +19,7 @@ html {
   background-color: #9ab7d3;
   color: #847f87;
   font-size: 12px;
+  list-style-type: none;
 }
 
 a:link {
@@ -132,7 +133,11 @@ div.newpost:hover {
 
 }
 
+img {
+  object-fit: cover;
 
+  max-height:100px;
+}
 
 div.rightbar{
   grid-row: 1 / 2;
@@ -235,6 +240,22 @@ div.textcontainer{
   background-color: #dec0bb;
 
 }
+
+div.alttextcontainer{
+  z-index: 301;
+  grid-row: 2 / -1;
+  grid-column: 2 / 5;
+  text-align: center;
+  background-color: #dec0bb;
+
+}
+
+div.indent{
+text-indent: 100px;
+
+}
+
+
 div.mainarea{
 
   grid-row: 4 / -1;
