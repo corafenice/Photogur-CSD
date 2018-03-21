@@ -1,8 +1,11 @@
-<div class="textcontainer">
+<div class="textcontainer comment-page">
 
 <%= image_tag @comments.url %>
 <% @comments.comments.each do |comment| %>
-<li><%= User.find(comment.user_id).username%><br>  <%= comment.usertext %><br></li>
+<div class="comments">
+  <section><%= User.find(comment.user_id).username.capitalize %></section><br>
+  <article><%= comment.usertext %></article><br>
+</div>
 <% end %>
 <br><br>
 <%= form_for @comment do |f| %>

@@ -1,68 +1,69 @@
 <!-- <div class="imgur">
-  <div class="navbar">
-    <div class="leftbar">
-      <div class="logo"><%= link_to 'PetShow', pictures_path %></div>
-      <div class="pulldown"><i class="fas fa-chevron-down"></i></div>
-      <div class="newpost"></div>
-      <div class="newpost">
-        <% if current_user %>
-        <%= link_to 'New Picture', new_picture_path %>
-        <% end %>
-      </div>
-    </div>
+<div class="navbar">
+<div class="leftbar">
+<div class="logo"><%= link_to 'PetShow', pictures_path %></div>
+<div class="pulldown"><i class="fas fa-chevron-down"></i></div>
+<div class="newpost"></div>
+<div class="newpost">
+<% if current_user %>
+<%= link_to 'New Picture', new_picture_path %>
+<% end %>
+</div>
+</div>
 
 
-    <div class="rightbar">
-      <div class="magnify">
-        <i class="fas fa-search"></i>
-      </div>
-      <div class="nextright">
-        <p class="userinfo">
-          <% if current_user %>
-          Signed in as <%= current_user.username %>. <%= link_to "Log out", sessions_path("current"), :method => :delete %>
-          <% else %>
-          <%= link_to "Log in", new_sessions_path %> or <%= link_to "Sign up", new_users_path %>
-          <% end %>
-        </p>
-      </div>
+<div class="rightbar">
+<div class="magnify">
+<i class="fas fa-search"></i>
+</div>
+<div class="nextright">
+<p class="userinfo">
+<% if current_user %>
+Signed in as <%= current_user.username %>. <%= link_to "Log out", sessions_path("current"), :method => :delete %>
+<% else %>
+<%= link_to "Log in", new_sessions_path %> or <%= link_to "Sign up", new_users_path %>
+<% end %>
+</p>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 
 
-  <div class="leftpane">
-  </div> -->
-  <div class="textcontainer">
-    <p class="greeting">
-      PetShow - Show off your pet!<br>
-      <span>A collection of our Pets!  </span><i class="fas fa-paw"></i>
+<div class="leftpane">
+</div> -->
+<div class="textcontainer">
+  <p class="greeting">
+    PetShow - Show off your pet!<br>
+    <span>A collection of our Pets!  </span><i class="fas fa-paw"></i>
 
-    </p>
-  </div>
+  </p>
+</div>
 
-  <div class="mainarea">
-    <% @pictures.each do |picture| %>
-    <div class="grid">
+<div class="mainarea">
+  <% @pictures.each do |picture| %>
+  <div class="grid">
 
-      <%= image_tag(picture.url, width:"100%" )%>
+    <%= image_tag(picture.url, width:"100%", height: "50%" )%>
+    <span class="picture_title">
       <%= picture.title %> </br>
-
       <% if current_user %>
-      <!-- <%= link_to 'Show', picture %> -->
       <i class="fas fa-paw"></i>
+      <!-- <%= link_to 'Show', picture %> -->
+      <%= link_to 'Comments', comments_path(picture)%></br>
       <%= link_to 'Edit', edit_picture_path(picture) %>
-      <%= link_to 'Remove', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <%= link_to 'Comments', comments_path(picture) %>
+      <%= link_to 'Remove', picture, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+
+
       <!-- <%= button_to "Like", likes_path, params: {user_id: current_user.id, picture_id: picture.id}, remote: true%> -->
       <!-- <form  class="button_to">
-        <div><input class="my_class" id=picture.id  value="Like" type="submit" /></div>
-      </form> -->
-      <% end %>
-    </div>
-
-
+      <div><input class="my_class" id=picture.id  value="Like" type="submit" /></div>
+    </form> -->
     <% end %>
   </div>
+  <% end %>
+</div>
+</span>
 
 <!-- <div class="rightpane">
 </div>
