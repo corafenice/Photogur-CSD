@@ -47,6 +47,7 @@
       <%= image_tag(picture.url, width:"100%" )%>
       <% if current_user %>
       <!-- <%= link_to 'Show', picture %> -->
+      <i class="fas fa-paw"></i>
       <%= link_to 'Edit', edit_picture_path(picture) %>
       <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= link_to 'Comments', comments_path(picture) %>
