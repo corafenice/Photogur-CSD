@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.
-            find_by(username: params[:username]).
+            find_by(username: params[:username])
             try(:authenticate, params[:password])
 
     return render action: "new" unless @user
