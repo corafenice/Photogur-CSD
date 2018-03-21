@@ -3,7 +3,7 @@
 }
 @font-face {
     font-family: "imgur";
-    src: url(VAG_Rounded_#f7aaaa.ttf) format("truetype");
+    src: url(VAG_Rounded_Black.ttf) format("truetype");
 }
 
 *, *:after, *:before {
@@ -16,8 +16,8 @@ html {
   font-family: 'Open Sans';
   height: 100%;
   border: 0;
-  background-color: #f7aaaa;
-  color: white;
+  background-color: #9ab7d3;
+  color: #847f87;
   font-size: 12px;
 }
 
@@ -46,7 +46,8 @@ a:active {
   margin: 0;
   border: 0;
   color: white;
-  background-color: #f7aaaa;
+  background-color: #dec0bb;
+  border-radius: 20px;
 }
 p.greeting {
 
@@ -66,7 +67,7 @@ span {
   border-width: 0;
   box-shadow: none;
   width: 100%;
-  background-color: #9999cc;
+  background-color: #9ab7d3;
   height: 50px;
   z-index: 500;
   position: fixed;
@@ -78,10 +79,11 @@ span {
 div.leftbar{
   grid-row: 1 / 2;
   grid-column: 2 /3;
-  width: 240px;
+  width: 275px;
   float:left;
   z-index: auto;
   overflow: auto;
+  background-color: #9ab7d3;
 }
 
 div.logo {
@@ -95,33 +97,35 @@ div.logo {
   z-index: auto;
   border-radius: 20px;
   margin: 4px;
+  background-color: #bdd0c4;
+  border-color: #bdd0c4;
 }
 
 div.logo:hover {
 
-  background-color: #9999cc;
-  border-color: #9999cc;
+  background-color: #dfccf1;
+  border-color: #dfccf1;
   border-radius: 20px;
   margin: 4px;
 
 }
 
-div.pulldown {
+div.newpost {
 
   text-align: center;
   float: right;
   z-index: auto;
-  width: 50px;
   border-radius: 20px;
   padding: 10px;
   margin: 4px;
 
+
 }
 
-div.pulldown:hover {
+div.newpost:hover {
 
-  background-color: #9999cc;
-  border-color: #9999cc;
+  background-color: #dfccf1;
+  border-color: #dfccf1;
   border-radius: 20px;
   padding: 10px;
   margin: 4px;
@@ -133,9 +137,9 @@ div.pulldown:hover {
 div.rightbar{
   grid-row: 1 / 2;
   grid-column: 3 / -1;
-  width: 340px;
+  width: 250px;
   float:right;
-  background-color: #9999cc;
+  background-color: #9ab7d3;
   z-index: auto;
 
 }
@@ -154,8 +158,8 @@ div.rightbar{
 
 .magnify:hover {
 
-  background-color: #9999cc;
-  border-color: #9999cc;
+  background-color: #dfccf1;
+  border-color: #dfccf1;
   border-radius: 20px;
   padding: 10px;
   margin: 4px;
@@ -175,8 +179,8 @@ div.navright{
 
 div.navright:hover {
 
-  background-color: #9999cc;
-  border-color: #9999cc;
+  background-color: #dfccf1;
+  border-color: #dfccf1;
   border-radius: 20px;
   padding: 10px;
   margin: 4px;
@@ -196,8 +200,8 @@ div.nextright{
 
 div.nextright:hover {
 
-  background-color: #9999cc;
-  border-color: #9999cc;
+  background-color: #dfccf1;
+  border-color: #dfccf1;
   border-radius: 20px;
   /* padding: 10px;*/
   margin: 4px;
@@ -208,14 +212,14 @@ div.nextright:hover {
   z-index: 100;
   grid-row: 1 / -1;
   grid-column: 1 / 2;
-  background-color: #f7aaaa;
+  background-color: #dec0bb;
 }
 
 .rightpane{
   z-index: 100;
   grid-row: 1 / -1;
   grid-column: 5 / -1;
-  background-color: #f7aaaa;
+  background-color: #dec0bb;
 }
 
 /* .container {
@@ -228,7 +232,7 @@ div.textcontainer{
   grid-row: 2 / 4;
   grid-column: 2 / 5;
   text-align: center;
-  background-color: #f7aaaa;
+  background-color: #dec0bb;
 
 }
 div.mainarea{
@@ -241,8 +245,7 @@ div.mainarea{
   grid-template-rows: repeat(3, [col] 1fr);
   background-color: #;
   padding: 21px;
-  border-color: #34373c;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .grid {

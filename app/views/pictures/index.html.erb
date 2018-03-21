@@ -1,15 +1,16 @@
 <div class="imgur">
   <div class="navbar">
     <div class="leftbar">
-      <div class="logo">PetShow</div>
-      <div class="pulldown"><i class="fas fa-chevron-down"></i></div>
-      <div class="newpost"></div>
+      <div class="logo"><%= link_to 'PetShow', pictures_path %></div>
+      <!-- <div class="pulldown"><i class="fas fa-chevron-down"></i></div>
+      <div class="newpost"></div> -->
+      <div class="newpost">
+        <% if current_user %>
+        <%= link_to 'New Picture', new_picture_path %>
+        <% end %>
+      </div>
     </div>
-    <span class="upload_picture">
-      <% if current_user %>
-      <%= link_to 'Upload New Picture', new_picture_path %>
-      <% end %>
-    </span>
+
 
     <div class="rightbar">
       <div class="magnify">
